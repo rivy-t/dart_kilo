@@ -9,6 +9,7 @@ is itself at an early stage of development.
 Basic text viewing, editing and searching capabilities.
 
 ```bash
+dart pub get # install dependencies (when needed; only required for 1st run)
 dart kilo.dart testfile
 ```
 
