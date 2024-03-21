@@ -1,1 +1,9 @@
+# spell-checker:ignore (pubspec) pubspec
+# ref: [dart ~ Static Analysis](https://dart.dev/tools/analysis)
+
 include: package:pedantic/analysis_options.yaml
+
+linter:
+  # ref: https://stackoverflow.com/questions/56381937/how-to-disable-a-linting-rule-inline-in-flutter @@ <https://archive.is/e85dC>
+  rules:
+    omit_local_variable_types: false
