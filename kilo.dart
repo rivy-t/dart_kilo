@@ -46,10 +46,11 @@ int findLastMatchRow = -1;
 
 // Current search direction
 enum FindDirection { forwards, backwards }
+
 var findDirection = FindDirection.forwards;
 
 String messageText = '';
-DateTime messageTimestamp;
+DateTime messageTimestamp = DateTime.now();
 
 void initEditor() {
   isFileDirty = false;
@@ -429,7 +430,7 @@ void editorSetStatusMessage(String message) {
 }
 
 String editorPrompt(String message,
-    [Function(String text, Key lastPressed) callback]) {
+    [Function(String text, Key lastPressed)? callback]) {
   final originalCursorRow = cursorRow;
 
   editorSetStatusMessage(message);
@@ -441,7 +442,7 @@ String editorPrompt(String message,
   cursorRow = originalCursorRow;
   editorSetStatusMessage('');
 
-  return response;
+  return response ?? '';
 }
 
 //
